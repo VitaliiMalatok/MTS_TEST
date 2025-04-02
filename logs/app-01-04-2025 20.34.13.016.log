@@ -1,0 +1,3 @@
+2025-04-01 20:34:13,373 INFO Test1 [main] This is an info message.
+2025-04-01 20:34:13,378 ERROR Test1 [main] This is an error message.
+2025-04-01 20:34:13,379 WARN Test1 [main] This is a warning message.
