@@ -9,17 +9,17 @@ import java.util.stream.Stream;
 
 public class LogReader {
     public static void main(String[] args) {
-        Path logDir = Paths.get("logs"); // Папка с логами
+        Path logDir = Paths.get("logs"); // Folder with logs
 
         try (Stream<Path> files = Files.list(logDir)) {
             Path latestLog = files
                     .filter(Files::isRegularFile)
-                    .max(Comparator.comparingLong(file -> file.toFile().lastModified())) // Находим последний изменённый файл
+                    .max(Comparator.comparingLong(file -> file.toFile().lastModified())) // Find the last modified file
                     .orElseThrow(() -> new IOException("No log files found"));
 
             System.out.println("Reading log file: " + latestLog);
 
-            // Читаем содержимое файла
+            // Reading the contents of the file
             Files.lines(latestLog).forEach(System.out::println);
 
         } catch (IOException e) {
