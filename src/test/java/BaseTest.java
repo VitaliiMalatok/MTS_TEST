@@ -16,13 +16,13 @@ public class BaseTest {
     public static final int TIMEOUT = 8;
     protected WebDriver driver;
     private static final Logger LOGGER = LogManager.getLogger(BaseTest.class);
-    public TelegramBotRunner botRunner;
+//    public TelegramBotRunner botRunner;
 
     @BeforeClass
     public void setUp() {
         LOGGER.info("Setting up WebDriver...");
         ChromeOptions options = new ChromeOptions();
-        botRunner = new TelegramBotRunner();
+//        botRunner = new TelegramBotRunner();
         //options.addArguments(INCOGNITO);
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);

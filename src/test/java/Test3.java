@@ -1,18 +1,12 @@
 import io.qameta.allure.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.example.MTSHomePage;
-import org.example.PaymentFormPage;
+import org.example.model.MTSHomePage;
+import org.example.model.PaymentFormPage;
 import org.example.TelegramBot;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import java.io.IOException;
-import java.nio.file.*;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Epic("MTS Online Payment")
 @Feature("Payment Form Tests")

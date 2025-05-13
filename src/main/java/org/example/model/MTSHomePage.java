@@ -1,4 +1,4 @@
-package org.example;
+package org.example.model;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +10,6 @@ import java.util.Map;
 public class MTSHomePage {
     private final WebDriver driver;
     private final By acceptCookiesButton = By.xpath("//button[contains(text(), 'Принять')]");
-
 
     public MTSHomePage(WebDriver driver) {
         this.driver = driver;
@@ -46,7 +45,6 @@ public class MTSHomePage {
             WebElement button = driver.findElement(acceptCookiesButton);
             button.click();
         } catch (Exception e) {
-
         }
     }
 }
