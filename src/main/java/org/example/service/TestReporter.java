@@ -11,7 +11,7 @@ public class TestReporter {
         String endTimeFormatted = dateFormat.format(new Date(endTime));
 
         return String.format(
-                "✅ Тест прошел успешно!\n%s\n%s - %s (%d ms)\n\n📜 *Логи:*\n```%s```",
+                "✅ The test was successful!\n%s\n%s - %s (%d ms)\n\n📜 *Logs:*\n```%s```",
                 new SimpleDateFormat("MM/dd/yyyy").format(new Date(startTime)),
                 startTimeFormatted,
                 endTimeFormatted,
@@ -21,6 +21,6 @@ public class TestReporter {
     }
 
     public static String generateFailureMessage(String errorMessage, String logs) {
-        return String.format("❌ %s\n📜 *Логи:*\n```%s```", errorMessage, logs);
+        return String.format("❌ %s\n📜 *Logs:*\n```%s```", errorMessage, logs);
     }
 }
