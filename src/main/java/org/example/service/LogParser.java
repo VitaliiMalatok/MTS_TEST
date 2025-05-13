@@ -22,10 +22,10 @@ public class LogParser {
                         }
                     })
                     .map(path -> path.toAbsolutePath().toString())
-                    .orElse("⚠ Лог-файл не найден");
+                    .orElse("⚠ Log file not found");
         } catch (IOException e) {
-            LOGGER.error("Ошибка при поиске последнего лог-файла: " + e.getMessage(), e);
-            return "⚠ Ошибка поиска лог-файла";
+            LOGGER.error("Error while searching for last log file: " + e.getMessage(), e);
+            return "⚠ Error searching for log file";
         }
     }
 
@@ -35,8 +35,8 @@ public class LogParser {
             int start = Math.max(allLines.size() - lines, 0);
             return String.join("\n", allLines.subList(start, allLines.size()));
         } catch (IOException e) {
-            LOGGER.error("Ошибка чтения лог-файла: " + e.getMessage(), e);
-            return "⚠ Ошибка чтения логов";
+            LOGGER.error("Error reading log file: " + e.getMessage(), e);
+            return "⚠ Error reading logs";
         }
     }
 }
