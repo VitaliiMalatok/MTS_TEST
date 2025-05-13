@@ -1,4 +1,4 @@
-package org.example;
+package org.example.service;
 
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -20,23 +20,18 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        // Этот метод может быть не нужен для вашего случая
     }
 
     public void sendMessageToTelegram(String messageText) {
-        // Создаем объект SendMessage
         SendMessage message = new SendMessage();
-        message.setChatId(chatId); // Устанавливаем ID чата
-        message.setText(messageText); // Устанавливаем текст сообщения
+        message.setChatId(chatId);
+        message.setText(messageText);
 
         try {
-            // Отправляем сообщение через execute()
             execute(message);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 }

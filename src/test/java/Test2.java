@@ -3,7 +3,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.model.MTSHomePage;
 import org.example.model.PaymentFormPage;
-import org.example.TelegramBot;
+import org.example.service.TelegramBot;
 import org.testng.annotations.BeforeMethod;
 import org.testng.asserts.SoftAssert;
 

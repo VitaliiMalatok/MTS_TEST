@@ -7,7 +7,10 @@ import io.qameta.allure.Story;
 import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.example.TelegramBot;
+import org.example.service.LogParser;
+import org.example.service.TelegramBot;
+import org.example.service.TestFailureHandler;
+import org.example.service.TestReporter;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

@@ -1,4 +1,4 @@
-import org.example.TelegramBot;
+import org.example.service.TelegramBot;
 
 public class TelegramTest {
     public static void main(String[] args) {

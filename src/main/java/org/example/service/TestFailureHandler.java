@@ -1,6 +1,7 @@
+package org.example.service;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.example.TelegramBot;
 
 public class TestFailureHandler {
     private static final Logger LOGGER = LogManager.getLogger(TestFailureHandler.class);
