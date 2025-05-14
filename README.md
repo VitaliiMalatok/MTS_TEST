@@ -60,6 +60,17 @@ Tests are automatically triggered via Jenkins:
 
 ---
 
+## 📊 Allure Reports
+
+- Automatically generated after each test run
+- Display test results for each case
+- Allow you to view run history and step-by-step details
+
+### 📸 Example Allure report:
+
+![Allure report example](screenshots/Screenshot%20(44).png)
+
+
 ## 📬 Telegram Integration
 
 After each run:
@@ -71,6 +82,16 @@ After each run:
 
 Telegram bot settings are located in `TelegramBot.java`.
 
+### 📸 Example Telegram notification:
+
+![Telegram report example](screenshots/Screenshot%20(45).png)
+
+### 📸 Example Telegram notification (test failed):
+
+![Telegram report example](screenshots/Screenshot%20(46).png)
+
+---
+
 ---
 
 ## 📌 Example Tests
@@ -79,6 +100,18 @@ Telegram bot settings are located in `TelegramBot.java`.
 - Checking the correctness of entered data inside the payment iframe
 
 ---
+
+
+## 📊 Allure Reports
+
+- Automatically generated after each test run
+- Display test results for each case
+- Allow you to view run history and step-by-step details
+
+### 📸 Example Allure report:
+
+![Allure report example](screenshots/Screenshot%20(44).png)
+
 
 ## 📋 Author
 
