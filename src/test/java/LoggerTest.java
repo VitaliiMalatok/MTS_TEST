@@ -1,8 +1,8 @@
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Test1 {
-    private static final Logger logger = LogManager.getLogger(Test1.class);
+public class LoggerTest {
+    private static final Logger logger = LogManager.getLogger(LoggerTest.class);
 
     @org.testng.annotations.Test
     public void testMethod() {
