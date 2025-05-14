@@ -92,26 +92,12 @@ Telegram bot settings are located in `TelegramBot.java`.
 
 ---
 
----
-
 ## 📌 Example Tests
 
 - Verifying placeholders on the payment form
 - Checking the correctness of entered data inside the payment iframe
 
 ---
-
-
-## 📊 Allure Reports
-
-- Automatically generated after each test run
-- Display test results for each case
-- Allow you to view run history and step-by-step details
-
-### 📸 Example Allure report:
-
-![Allure report example](screenshots/Screenshot%20(44).png)
-
 
 ## 📋 Author
 
