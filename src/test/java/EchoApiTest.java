@@ -13,17 +13,13 @@ import org.example.service.TestFailureHandler;
 import org.example.service.TestReporter;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
 @Epic("Postman Echo API")
 @Feature("Request Methods")
 public class EchoApiTest {
-
     private static final Logger LOGGER = LogManager.getLogger(EchoApiTest.class);
-
     private static final String BASE_URI = "https://postman-echo.com";
     private static final String COMMON_BODY = "This is expected to be sent back as part of response body.";
     private static final String HEADER_CONTENT_TYPE = "Content-Type";
@@ -31,7 +27,6 @@ public class EchoApiTest {
     private static final int STATUS_OK = 200;
     private static final String PORT = "443";
     private TelegramBot bot;
-
     private final TestFailureHandler failureHandler = new TestFailureHandler(bot);
     private long startTime;
     private long endTime;
@@ -76,7 +71,6 @@ public class EchoApiTest {
                     .body("headers.x-forwarded-port", equalTo(PORT))
                     .body("url", equalTo(BASE_URI + "/get"))
                     .extract().response();
-
             logResponse(response);
             sendSuccessLogToTelegram();
         } catch (AssertionError | Exception e) {
@@ -106,7 +100,6 @@ public class EchoApiTest {
                     .body("headers.content-type", containsString(CONTENT_TYPE_TEXT_PLAIN))
                     .body("url", containsString(BASE_URI + "/post"))
                     .extract().response();
-
             logResponse(response);
             sendSuccessLogToTelegram();
         } catch (AssertionError | Exception e) {
@@ -136,7 +129,6 @@ public class EchoApiTest {
                     .body("headers.content-type", containsString(CONTENT_TYPE_TEXT_PLAIN))
                     .body("url", containsString(BASE_URI + "/patch"))
                     .extract().response();
-
             logResponse(response);
             sendSuccessLogToTelegram();
         } catch (AssertionError | Exception e) {
@@ -169,7 +161,6 @@ public class EchoApiTest {
                     .body("json", nullValue())
                     .body("url", equalTo(BASE_URI + "/put"))
                     .extract().response();
-
             logResponse(response);
             sendSuccessLogToTelegram();
         } catch (AssertionError | Exception e) {
@@ -199,7 +190,6 @@ public class EchoApiTest {
                     .body("headers.content-type", containsString(CONTENT_TYPE_TEXT_PLAIN))
                     .body("url", containsString(BASE_URI + "/delete"))
                     .extract().response();
-
             logResponse(response);
             sendSuccessLogToTelegram();
         } catch (AssertionError | Exception e) {
