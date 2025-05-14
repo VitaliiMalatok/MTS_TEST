@@ -28,7 +28,6 @@ public class Test extends BaseTest {
     private long endTime;
     private TestFailureHandler failureHandler;
 
-
     @BeforeMethod
     @Step("Initializing Home Page")
     public void setUpPage() {
@@ -100,10 +99,8 @@ public class Test extends BaseTest {
             String actualTextOfC_C_V = paymentFormPage.getTextFromWebElement(paymentFormPage.ccVLabel);
             String actualTextOnPersonName = paymentFormPage.getTextFromWebElement(paymentFormPage.ccNameLabel);
             List<WebElement> actualLogos = paymentFormPage.getLogos();
-
             Allure.step("Validating payment details");
             SoftAssert softAssert = new SoftAssert();
-
             // Ввод значений с проверкой
             softAssert.assertEquals(actualAmountOnP, SUM_PAY_DOUBLE, "Сумма в <p> отличается");
             softAssert.assertEquals(actualSumOnButton, SUM_PAY_DOUBLE, "Сумма на <button> отличается");
@@ -112,7 +109,6 @@ public class Test extends BaseTest {
             softAssert.assertEquals(actualTextOfC_C_Exp, "Срок действия", "Отличие Срок действия");
             softAssert.assertEquals(actualTextOfC_C_V, "CVC", "Отличие CVC");
             softAssert.assertEquals(actualTextOnPersonName, "Имя держателя (как на карте)", "Отличие Имя держателя");
-
             // Проверка логотипов
             endTime = System.currentTimeMillis();
             long duration = endTime - startTime;
