@@ -65,7 +65,7 @@ public class Test extends BaseTest {
             String message = TestReporter.generateSuccessMessage(startTime, endTime, duration, logs);
             bot.sendMessageToTelegram(message);
         } catch (AssertionError e) {
-            failureHandler.handleTestFailure("Тест зафейлился!", e);
+            failureHandler.handleTestFailure("The test failed!", e);
             throw e;
         } catch (Exception e) {
             failureHandler.handleTestFailure("Тест упал из-за ошибки: " + e.getMessage(), e);
