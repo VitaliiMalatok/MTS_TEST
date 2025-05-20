@@ -68,7 +68,7 @@ public class Test extends BaseTest {
             failureHandler.handleTestFailure("The test failed!", e);
             throw e;
         } catch (Exception e) {
-            failureHandler.handleTestFailure("Тест упал из-за ошибки: " + e.getMessage(), e);
+            failureHandler.handleTestFailure("The test failed due to an error: " + e.getMessage(), e);
             throw e;
         }
     }
@@ -119,7 +119,7 @@ public class Test extends BaseTest {
             failureHandler.handleTestFailure("The test failed!!", e);
             throw e;
         } catch (Exception e) {
-            failureHandler.handleTestFailure("Тест упал из-за ошибки: " + e.getMessage(), e);
+            failureHandler.handleTestFailure("The test failed due to an error: " + e.getMessage(), e);
             throw e;
         }
     }
