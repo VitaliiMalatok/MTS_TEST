@@ -5,7 +5,7 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 public class TelegramBot extends TelegramLongPollingBot {
-    private final String token = "7904768280:AAHFkKLGinGFpm-0IvbIdSCO8rPcZdjndeY";
+    private final String token = "";
     private final String chatId = "646030568";
 
     @Override
